@@ -17,12 +17,15 @@ export class CatAPIService {
 
   getCat():Observable<gatos[]> {
     return this.cliente.get<gatos[]>(
-      this.url + '/images/search?has_breeds=1&limit=100', this.httpOptions
+      this.url + '/images/search?has_breeds=1&limit=20', this.httpOptions
     ).pipe(retry(1), 
     catchError(this.fail))
   }
   fail(error: HttpErrorResponse){
     console.log(error)
     return throwError(error)
+  }
+  favAdd(catFavId: number):Observable<void>{
+    return this.cliente.post<void>(this.url+`/favourites`, {image_id: catFavId, sub_id: 'Alan'},this.httpOptions)
   }
 }
