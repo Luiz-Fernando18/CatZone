@@ -5,9 +5,8 @@
         <button routerLink="favoritos" mat-flat-button color="warn">Favoritos</button>
     </div>
 </div>
-<div class="favs">
-    <div *ngFor="let catimgs of gatosfav" class="favor">
-        <img class="imgscats" [src]="catimgs.image.url">
-        <button mat-flat-button color="warn" id="remover" (click)="delFav(catimgs.id)">Remover Favorito</button>
-    </div>
+<div class="notfound">
+    <p class="error">Que pena</p>
+    <p class="error">Não conseguimos encontrar essa página :(</p>
+    <img src="../../../assets/Gato_Triste-removebg-preview.png">
 </div>

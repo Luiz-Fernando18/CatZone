@@ -8,8 +8,6 @@
     justify-content: center
     align-items: center
     gap: 2vw
-.example-card
-    max-width: 20vw
 ::ng-deep .mat-tab-links
     display: flex
     justify-content: center
@@ -17,9 +15,25 @@
 .favs
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
+.favor
+    margin: 10px 10px
 .imgscats
     height: 15vw
     max-height: 15vw
     object-fit: cover
-    margin: 20px 10px
+    margin-bottom: 0px
     border-radius: 10px
+    min-width: 23vw
+    max-width: 23vw
+.delete
+    position: absolute
+    top: 0
+#remover
+    background-color: #65656577
+    min-width: 23vw
+    max-width: 23vw
+    margin-top: 0px
+#remover:hover
+    background-color: #f44336
+    transform: scale(1.05)
+    font-size: 1.05rem

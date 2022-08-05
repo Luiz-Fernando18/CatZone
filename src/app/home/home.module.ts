@@ -5,12 +5,14 @@ import { HomeRoutingModule } from './home-routing.module';
 import { CardsComponent } from './cards/cards.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { MaterialModule } from './../material/material.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     CardsComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,

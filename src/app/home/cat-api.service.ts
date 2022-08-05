@@ -32,5 +32,12 @@ export class CatAPIService {
   pullFavCats():Observable<gatos[]>{
     return this.cliente.get<gatos[]>(
       this.url + '/favourites?sub_id=Alan', this.httpOptions
-    )}
+    )
+  }
+
+  delFav(idDel: number):Observable<void>{
+    return this.cliente.delete<void>(
+      this.url + `/favourites/${idDel}`,this.httpOptions
+    )
+  }
   }

@@ -13,6 +13,12 @@ export class FavoritesComponent implements OnInit {
 
   constructor(private cats: CatAPIService) { }
 
+  delFav(idDel: number){
+    return this.cats.delFav(idDel).subscribe((a)=>{
+      this.cats.pullFavCats().subscribe((fav)=>{
+        this.gatosfav = fav})
+    })}
+
   ngOnInit(): void {
     this.cats.pullFavCats().subscribe((fav)=>{
       this.gatosfav = fav

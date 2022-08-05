@@ -9,6 +9,7 @@ import { CatAPIService } from '../cat-api.service';
 })
 export class CardsComponent implements OnInit {
 
+  like:boolean = false
   catInfos: any 
 
   constructor(private cats: CatAPIService) { }

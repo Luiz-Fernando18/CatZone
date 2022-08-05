@@ -5,6 +5,11 @@
         <button routerLink="favoritos" mat-flat-button color="warn">Favoritos</button>
     </div>
 </div>
+<div class="chargin" *ngIf="catInfos == null">
+    <mat-spinner></mat-spinner>
+    <p class="waittext">Só um segundo,</p>
+    <p class="waittext">estamos carregando as imagens</p>
+</div>
 <div class="center">
     <div class="cards">
         <mat-card class="example-card" *ngFor="let cat of catInfos">
@@ -16,7 +21,7 @@
             </mat-card-content>
             <mat-card-actions>
                 <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-                    <mat-icon (click)="favCats(cat.id)">favorite</mat-icon>
+                    <mat-icon (click)="favCats(cat.id)" [ngStyle]="{'color': ('like' ? '#92929277' : '#f44336')}">favorite</mat-icon>
                 </button>
                 <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
                     <mat-icon>open_in_new</mat-icon>
