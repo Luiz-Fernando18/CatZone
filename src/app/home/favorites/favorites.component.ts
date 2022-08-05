@@ -1,3 +1,4 @@
+import { gatos } from './../catsobject';
 import { Component, OnInit } from '@angular/core';
 import { CatAPIService } from '../cat-api.service';
 
@@ -8,9 +9,15 @@ import { CatAPIService } from '../cat-api.service';
 })
 export class FavoritesComponent implements OnInit {
 
-  constructor() { }
+  gatosfav: any[]
+
+  constructor(private cats: CatAPIService) { }
 
   ngOnInit(): void {
+    this.cats.pullFavCats().subscribe((fav)=>{
+      this.gatosfav = fav
+      console.log(fav)
+    })
   }
 
 }

@@ -5,3 +5,6 @@
         <button routerLink="favoritos" mat-flat-button color="warn">Favoritos</button>
     </div>
 </div>
+<div class="favs">
+    <img class="imgscats" *ngFor="let catimgs of gatosfav" [src]="catimgs.image.url">
+</div>

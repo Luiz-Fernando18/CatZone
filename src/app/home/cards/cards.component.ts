@@ -13,6 +13,12 @@ export class CardsComponent implements OnInit {
 
   constructor(private cats: CatAPIService) { }
 
+  favCats(id: string){
+    return this.cats.favAdd(id).subscribe((a)=>{
+      console.log(a)
+    })
+  }
+
   ngOnInit(): void {
     this.cats.getCat().subscribe((infos: gatos[])=>{this.catInfos=infos;console.log(infos)})
   }

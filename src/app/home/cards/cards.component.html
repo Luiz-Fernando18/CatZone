@@ -1,25 +1,27 @@
 <div class="logo">
-    <img src="../../../../assets/Logo.png" alt="Logo do catzone" style="max-width: 450px">
+    <img src="../../../../assets/Logo.png" alt="Logo do catzone"class="logoimg">
     <div class="botoes">
         <button routerLink="/" active="" mat-flat-button color="primary">Gatos</button>
         <button routerLink="favoritos" mat-flat-button color="warn">Favoritos</button>
     </div>
 </div>
-<div class="cards">
-    <mat-card style="margin: 20px 20px;" class="example-card" *ngFor="let cat of catInfos">
-        <img style="height: 300px; max-height: 300px; object-fit: cover;" mat-card-image [src]="cat.url" alt="Photo of a Shiba Inu">
-        <mat-card-title>{{cat.breeds[0].name}}</mat-card-title>
-        <mat-card-subtitle>{{cat.breeds[0].origin}}</mat-card-subtitle>
-        <mat-card-content>
-            <p>{{ cat.breeds[0].description }}</p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-                <mat-icon>favorite</mat-icon>
-            </button>
-            <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
-                <mat-icon>open_in_new</mat-icon>
-            </button>
-        </mat-card-actions>
-    </mat-card>
+<div class="center">
+    <div class="cards">
+        <mat-card class="example-card" *ngFor="let cat of catInfos">
+            <img style="height: 300px; max-height: 300px; object-fit: cover;" mat-card-image [src]="cat.url" alt="Photo of a Shiba Inu">
+            <mat-card-title>{{cat.breeds[0].name}}</mat-card-title>
+            <mat-card-subtitle>{{cat.breeds[0].origin}}</mat-card-subtitle>
+            <mat-card-content>
+                <p>{{ cat.breeds[0].description }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon (click)="favCats(cat.id)">favorite</mat-icon>
+                </button>
+                <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+                    <mat-icon>open_in_new</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>
