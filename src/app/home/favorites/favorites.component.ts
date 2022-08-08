@@ -14,7 +14,7 @@ export class FavoritesComponent implements OnInit {
   constructor(private cats: CatAPIService) { }
 
   delFav(idDel: number){
-    return this.cats.delFav(idDel).subscribe((a)=>{
+    return this.cats.delFav(idDel).subscribe(()=>{
       this.cats.pullFavCats().subscribe((fav)=>{
         this.gatosfav = fav})
     })}

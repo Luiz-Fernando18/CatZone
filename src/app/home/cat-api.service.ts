@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, retry, throwError } from 'rxjs';
-import { gatos } from './catsobject';
+import { gatos, datas } from './catsobject';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +17,7 @@ export class CatAPIService {
 
   getCat():Observable<gatos[]> {
     return this.cliente.get<gatos[]>(
-      this.url + '/images/search?has_breeds=1&limit=50', this.httpOptions
-    ).pipe(retry(1), 
+      this.url + '/images/search?has_breeds=1&limit=50', this.httpOptions).pipe(retry(1), 
     catchError(this.fail))
   }
   fail(error: HttpErrorResponse){
@@ -38,6 +37,12 @@ export class CatAPIService {
   delFav(idDel: number):Observable<void>{
     return this.cliente.delete<void>(
       this.url + `/favourites/${idDel}`,this.httpOptions
+    )
+  }
+
+  infosCat(id: string):Observable<datas>{
+    return this.cliente.get<datas>( 
+      this.url + `/images/${id}`
     )
   }
   }

@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="cats">
+    <div class="content">
+        <div class="infos">
+            <h2 class="breed">{{infosCat.breeds[0].name}} ({{infosCat.breeds[0].origin}})</h2>
+            <p class="texts">Descrição:</p>
+            <p>{{infosCat.breeds[0].description}}</p>
+            <p class="texts">Temperamento:</p>
+            <p>{{infosCat.breeds[0].temperament}}</p>
+            <p class="texts">Expectativa de vida:</p>
+            <p>{{infosCat.breeds[0].life_span}} anos</p>
+            <div class="division">
+                <div>
+                    <p class="numbers">Nível de energia: {{infosCat.breeds[0].energy_level}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].energy_level*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Nivel de Adaptabilidade: {{infosCat.breeds[0].adaptability}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].adaptability*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Amigabilidade com Crianças: {{infosCat.breeds[0].child_friendly}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].child_friendly*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Amigabilidade com Cachorros: {{infosCat.breeds[0].dog_friendly}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].dog_friendly*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Amigabilidade com Estranhos: {{infosCat.breeds[0].stranger_friendly}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].stranger_friendly*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Nível de inteligência: {{infosCat.breeds[0].intelligence}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].intelligence*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Nível de necessidades sociais: {{infosCat.breeds[0].social_needs}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].social_needs*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Nível de resistência/saúde: {{infosCat.breeds[0].health_issues}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].health_issues*20}}" id="bar"></mat-progress-bar>
+                    <p class="numbers">Nível de afeição: {{infosCat.breeds[0].affection_level}}</p>
+                    <mat-progress-bar mode="determinate" value="{{infosCat.breeds[0].affection_level*20}}" id="bar"></mat-progress-bar>
+                </div>
+                <img [src]="infosCat.url" class="img">
+            </div>
+            <p class="link">Se quiser saber ainda mais sobre essa espécie, acesse o link da wikipedia: <a [href]="infosCat.breeds[0].wikipedia_url" target="_blank">{{infosCat.breeds[0].wikipedia_url}}</a></p>
+        </div>
+    </div>
+</div>

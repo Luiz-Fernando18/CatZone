@@ -1,9 +1,8 @@
-<div class="logo">
-    <img src="../../../../assets/Logo.png" alt="Logo do catzone" style="max-width: 450px">
-    <div class="botoes">
-        <button routerLink="/" active="" mat-flat-button color="primary">Gatos</button>
-        <button routerLink="favoritos" mat-flat-button color="warn">Favoritos</button>
-    </div>
+<app-header></app-header>
+<div class="chargin" *ngIf="gatosfav== null">
+    <mat-spinner></mat-spinner>
+    <p class="waittext">Só um segundo,</p>
+    <p class="waittext">estamos carregando seus favoritos</p>
 </div>
 <div class="favs">
     <div *ngFor="let catimgs of gatosfav" class="favor">
