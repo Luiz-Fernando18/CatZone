@@ -9,19 +9,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./sab-mais.component.sass']
 })
 export class SabMaisComponent implements OnInit {
-  
-  infos: string[] = [
-    'energy_level',
-    'adaptability',
-    'child_friendly',
-    'dog_friendly',
-    'stranger_friendly',
-    'intelligence',
-    'social_needs',
-    'health_issues',
-    'affection_level']
 
   infosCat: any
+
   constructor(private cats: CatAPIService, private router: ActivatedRoute) { }
 
   ngOnInit(): void {

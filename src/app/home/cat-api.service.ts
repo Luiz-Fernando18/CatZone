@@ -17,7 +17,7 @@ export class CatAPIService {
 
   getCat():Observable<gatos[]> {
     return this.cliente.get<gatos[]>(
-      this.url + '/images/search?has_breeds=1&limit=50', this.httpOptions).pipe(retry(1), 
+      this.url + '/images/search?has_breeds=1&limit=22', this.httpOptions).pipe(retry(1), 
     catchError(this.fail))
   }
   fail(error: HttpErrorResponse){

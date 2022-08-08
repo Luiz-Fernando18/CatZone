@@ -6,7 +6,7 @@
 </div>
 <div class="favs">
     <div *ngFor="let catimgs of gatosfav" class="favor">
-        <img class="imgscats" [src]="catimgs.image.url">
+        <img class="imgscats" [src]="catimgs.image.url" routerLink="/sabmais/{{catimgs.image.id}}">
         <button mat-flat-button color="warn" id="remover" (click)="delFav(catimgs.id)">Remover Favorito</button>
     </div>
 </div>
