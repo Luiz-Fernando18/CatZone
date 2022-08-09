@@ -2,7 +2,7 @@
     display: flex
     justify-content: center
     align-items: center
-    gap: 40vw
+    gap: 35vw
 
 .logoimg
     max-width: 450px
@@ -13,7 +13,22 @@
     align-items: center
     gap: 2vw
 
+.favs:hover, .cats:hover, .out:hover
+    opacity: 0.7
+    transform: scale(1.1)
+    transition: 20ms
+
+.favs:not(:hover), .cats:not(:hover), .out:hover:not(:hover)
+    transform: scale(1)
+    transition: 20ms
+
 ::ng-deep .mat-tab-links
     display: flex
     justify-content: center
     gap: 5vw
+
+.out
+    background: none
+    border: none
+    color: white
+    font-size: x-large

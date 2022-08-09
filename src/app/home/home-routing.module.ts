@@ -7,9 +7,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: CardsComponent},
+  {path: 'gatos', component: CardsComponent},
   {path: 'favoritos', component: FavoritesComponent},
-  {path: 'login', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'sabmais/:id', component: SabMaisComponent},
   {path: '**', component: PageNotFoundComponent},
 ];

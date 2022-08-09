@@ -14,8 +14,8 @@
                 <p>{{ cat.breeds[0].description }}</p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-icon-button aria-label="Example icon button with a heart icon">
-                    <mat-icon (click)="favCats(cat.id)" id="btnnotpress">favorite</mat-icon>
+                <button mat-icon-button color="warn"aria-label="Example icon button with a heart icon">
+                    <mat-icon (click)="favCats(cat.id)">favorite</mat-icon>
                 </button>
                 <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
                     <mat-icon routerLink="sabmais/{{cat.id}}">open_in_new</mat-icon>
