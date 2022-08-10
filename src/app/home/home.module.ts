@@ -8,7 +8,6 @@ import { MaterialModule } from './../material/material.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderComponent } from './header/header.component';
 import { SabMaisComponent } from './sab-mais/sab-mais.component';
-import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -18,7 +17,6 @@ import { LoginComponent } from './login/login.component';
     PageNotFoundComponent,
     HeaderComponent,
     SabMaisComponent,
-    LoginComponent
   ],
   imports: [
     CommonModule,

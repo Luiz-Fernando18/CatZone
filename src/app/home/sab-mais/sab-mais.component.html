@@ -1,5 +1,10 @@
 <app-header></app-header>
-<div class="cats">
+<div class="chargin" *ngIf="infosCat == null">
+    <mat-spinner></mat-spinner>
+    <p class="waittext">Só um segundo,</p>
+    <p class="waittext">estamos carregando as informações</p>
+</div>
+<div class="cats" *ngIf="infosCat != null">
     <div class="content">
         <div class="infos">
             <h2 class="breed">{{infosCat.breeds[0].name}} ({{infosCat.breeds[0].origin}})</h2>
@@ -32,6 +37,7 @@
                 </div>
                 <img [src]="infosCat.url" class="img">
             </div>
+            <button mat-button (click)="favCats(infosCat.id)" color="warn" class="fav">Favoritar</button>
             <p class="link">Se quiser saber ainda mais sobre essa espécie, acesse o link da wikipedia: <a [href]="infosCat.breeds[0].wikipedia_url" target="_blank">{{infosCat.breeds[0].wikipedia_url}}</a></p>
         </div>
     </div>
